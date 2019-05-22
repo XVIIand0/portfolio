@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>個人履歷</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	 <link rel="stylesheet" href="css/cloud.css">
+    <link rel="stylesheet" href="css/jqcloud.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.min.js">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="border_line">
+	<div class="upper"> 
+	<canvas id="myChart"></canvas>
+	<div class="upleft_side">
+		<H1>王又諄</H1>
+		<h2>--中原大學-資訊管理學系--</h2><br>
+		<h3>『答應了，就要做到。』</h3>
+		<a href="https://github.com/XVIIand0/"><button type="button" class="btn btn-git">Github</button></a>
+		<a href="https://xviiand0.github.io/selfweb/"><button type="button" class="btn btn-self">個人網頁</button></a>
+		<a href="mailto:w870209w@gmail.com"><button type="button" class="btn btn-mail">我的MAIL</button></a>
+		<br>
+		<H2 class="skills">專業技能 skills</H2><br>
+		<div id="my_favorite_latin_words" style="width: 30%; height:60%;"></div>
+		</div>
+		
+	</div>
+	<hr>
+	<div class="lower"> 
+<section class="timeline">
+  <ol>
+    
+    <li>
+      <div>
+        <time>2016 下半年</time> 參加熱音社，擔任貝斯手。<br><img width="200px" src="img/bass.png">
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>2017 上半年</time> 參加鬥陣特攻實況主表演賽。 
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>2018 上半年</time> 於中原大學網路程式設計期末專案前10名。
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>2018 下半年</time> 參加聯合資訊ERP人才培訓課程，於培訓期間連續獲得兩次第一名。
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>2019 上半年</time>(1.)聯合資訊結業之後被推薦至杏一醫療器材實習<br>(2.)參與鍵盤糾察隊專案的專案設計與實踐。<br><a href="https://140.135.113.109:8000/article/index"><img src="img/mark.png"></a>
+      </div>
+    </li>
+
+    <li>
+      <div>
+        <time>2019 下半年(未來指望)</time> (1.)繼續完成專案鍵盤糾察隊。<br>(2.)於杏一醫療器材資訊部擔任實習生。
+      </div>
+    </li>
+    
+    <li>
+      
+    </li>
+   
+   
+  </ol>
+  
+ 
+</section>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js'></script>
+
+  
+
+
+
+	</div> 
+	</div>
+	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jqcloud/1.0.4/jqcloud-1.0.4.min.js'></script>
+    <script src="js/cloud.js"></script>
+	<script>
+		var data = {
+        datasets: [{
+            label: "程式能力(各項目可以點選)", //與XXX相關
+            data: [20, 60, 60, 70, 80], //數值
+            backgroundColor: [ //顏色
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 77, 0, 0.2)',
+                'rgba(0, 71, 125, 0.2)',
+                'rgba(0, 0, 205, 0.2)',
+                'rgba(112, 128, 144, 0.2)',
+                'rgba(153, 0, 54, 0.2)'
+            ],
+             borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 77, 0, 1)',
+                'rgba(0, 71, 125, 1)',
+                'rgba(0, 0, 205, 1)',
+                'rgba(112, 128, 144, 1)',
+                'rgba(153, 0, 54, 1)'
+            ],
+            borderWidth: 1,
+
+        }],
+        labels: [ //網軍ID
+            "C#",
+            "Java",
+            "HTML/js/css",
+            "JSP",
+            "python"
+        ]
+    };
+
+    $(document).ready(
+        function() {
+            var canvas = document.getElementById("myChart");
+            var ctx = canvas.getContext("2d");
+            var myNewChart = new Chart(ctx, {
+                type: 'bar',
+                data: data,
+                options: {
+                    legend: {
+                        labels: { //與XX相關css
+                            //fontColor: 'red',
+
+                            fontSize: 40
+                        }
+                    },
+                    scales: {
+                        yAxes: [{ //調整Y軸字
+                            scaleLabel: {
+                                display: true,
+                                labelString: '強度(%)',
+                                fontSize: 40
+                            },
+                            ticks: {
+                                min: 0,
+                                max: 100,
+                                stepSize: 10,
+                                fontSize: 40,
+                                callback: function(value, index, values) {
+                                    return value.toLocaleString();
+                                }
+                            }
+                        }],
+                        xAxes: [{ //調整X軸字
+                            ticks: {
+                                fontSize: 40
+                            }
+                        }]
+                    }
+                }
+            });
+            canvas.onclick = function(evt) {
+                    var activePoints = myNewChart.getElementsAtEvent(evt);
+                    if (activePoints[0]) {
+                        var chartData = activePoints[0]['_chart'].config.data;
+                        var idx = activePoints[0]['_index'];
+
+                        var label = chartData.labels[idx];
+                        var value = chartData.datasets[0].data[idx];
+                        switch(label){
+                        	case "JSP":
+                        		$("#my_favorite_latin_words_word_2").toggleClass("hide");
+                        		$("#my_favorite_latin_words_word_3").toggleClass("hide");
+                        		$("#my_favorite_latin_words_word_4").toggleClass("hide");
+                        		$("#my_favorite_latin_words_word_5").toggleClass("hide");
+                        		$("#my_favorite_latin_words_word_6").toggleClass("hide");
+                        		$("#my_favorite_latin_words_word_7").toggleClass("hide");
+                        		$("#my_favorite_latin_words_word_8").toggleClass("hide");
+                        		$("#my_favorite_latin_words_word_9").toggleClass("hide");
+                        		$("#my_favorite_latin_words_word_10").toggleClass("hide");
+                        		$("#my_favorite_latin_words_word_11").toggleClass("hide");
+                        		$("#my_favorite_latin_words_word_12").toggleClass("hide");
+                        		$("#my_favorite_latin_words_word_13").toggleClass("hide");
+                        		$("#my_favorite_latin_words_word_14").toggleClass("hide");
+                        		$("#my_favorite_latin_words_word_0").removeClass("hide");
+                        		$("#my_favorite_latin_words_word_1").removeClass("hide");
+
+                        		break;
+                        	case "HTML/js/css":
+                        		$("#my_favorite_latin_words_word_0").toggleClass("hide");
+                        		$("#my_favorite_latin_words_word_1").toggleClass("hide");
+                        		$("#my_favorite_latin_words_word_2").toggleClass("hide");
+                        		$("#my_favorite_latin_words_word_3").toggleClass("hide");
+                        		$("#my_favorite_latin_words_word_4").toggleClass("hide");
+                        		$("#my_favorite_latin_words_word_6").toggleClass("hide");
+                        		$("#my_favorite_latin_words_word_7").toggleClass("hide");
+                        		$("#my_favorite_latin_words_word_8").toggleClass("hide");
+                        		$("#my_favorite_latin_words_word_11").toggleClass("hide");
+                        		$("#my_favorite_latin_words_word_12").toggleClass("hide");
+                        		$("#my_favorite_latin_words_word_13").toggleClass("hide");
+                        		$("#my_favorite_latin_words_word_14").toggleClass("hide");
+                        		$("#my_favorite_latin_words_word_5").removeClass("hide");
+                        		$("#my_favorite_latin_words_word_9").removeClass("hide");
+                        		$("#my_favorite_latin_words_word_10").removeClass("hide");
+                        		
+                        	break;
+                        	
+                        	case "python":
+                        		$("#my_favorite_latin_words_word_0").toggleClass("hide");
+                        		$("#my_favorite_latin_words_word_1").toggleClass("hide");
+                        		$("#my_favorite_latin_words_word_3").toggleClass("hide");
+                        		$("#my_favorite_latin_words_word_5").toggleClass("hide");
+                        		$("#my_favorite_latin_words_word_6").toggleClass("hide");
+								$("#my_favorite_latin_words_word_9").toggleClass("hide");
+                        		$("#my_favorite_latin_words_word_10").toggleClass("hide");
+                        		$("#my_favorite_latin_words_word_12").toggleClass("hide");
+                        		$("#my_favorite_latin_words_word_14").toggleClass("hide");
+                        		$("#my_favorite_latin_words_word_7").removeClass("hide");
+                        		$("#my_favorite_latin_words_word_8").removeClass("hide");
+                        		$("#my_favorite_latin_words_word_2").removeClass("hide");
+                        		$("#my_favorite_latin_words_word_4").removeClass("hide");
+                        		$("#my_favorite_latin_words_word_11").removeClass("hide");
+                        		$("#my_favorite_latin_words_word_13").removeClass("hide");
+                        	break;
+                        }
+                        
+                    }
+                };
+            
+        }
+    ); 
+	</script>
+</body>
+</html>

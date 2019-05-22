@@ -1,0 +1,54 @@
+
+
+div.jqcloud {
+ font-family: Microsoft JhengHei;
+  font-size: 9px;
+  line-height:inherit;
+  display:inline-block;
+  border: 2px solid rgba(108, 89, 179, 0.75);
+  border-radius: 5px;
+  margin-left:9.5%;
+}
+#my_favorite_latin_words:hover{
+	background-color:rgba(108, 89, 179, 0.1);
+}
+div.jqcloud a {
+  text-decoration: none;
+}
+
+div.jqcloud span.w10 {font-size: 550%;}
+div.jqcloud span.w9 { font-size: 500%; }
+div.jqcloud span.w8 { font-size: 450%; }
+div.jqcloud span.w7 { font-size: 400%; }
+div.jqcloud span.w6 { font-size: 350%; }
+div.jqcloud span.w5 { font-size: 300%; }
+div.jqcloud span.w4 { font-size: 250%; }
+div.jqcloud span.w3 { font-size: 200%; }
+div.jqcloud span.w2 { font-size: 175%; }
+div.jqcloud span.w1 { font-size: 150%; }
+
+/* colors */
+
+div.jqcloud { color: #09f; }
+div.jqcloud a { color: inherit; }
+div.jqcloud a:hover { color: #0df; }
+div.jqcloud a:hover { color: #0cf; }
+div.jqcloud span.w10 {color: #FF4D40; }
+div.jqcloud span.w9 { color: #FF4500 ;}
+div.jqcloud span.w8 { color: #FF8C00; }
+div.jqcloud span.w7 { color: #FFD700; }
+div.jqcloud span.w6 { color: #008080; }
+div.jqcloud span.w5 { color: #CC7722; }
+div.jqcloud span.w4 { color: #5E86C1; }
+div.jqcloud span.w3 { color: #DB7093; }
+div.jqcloud span.w2 { color: #20B2AA; }
+div.jqcloud span.w1 { color: #4682B4; }
+
+/* layout */
+
+div.jqcloud {
+  overflow: hidden;
+  
+}
+
+div.jqcloud span { padding: 0; }
